@@ -8,6 +8,7 @@ public class CreditCardModel {
 	private String id;
 	private String creditCardNumber;
 	private String accountNumber;
+	private String type;
 	private Double creditLimit;
 	private Double avalibleAmount;
 	
@@ -49,6 +50,14 @@ public class CreditCardModel {
 
 	public void setAvalibleAmount(Double avalibleAmount) {
 		this.avalibleAmount = avalibleAmount;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 	
