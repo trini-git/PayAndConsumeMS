@@ -17,7 +17,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/pay-and-consume")
+//@RequestMapping("/pay-and-consume")
 @Api(value="PayAndConsumeController", description="PAY AND CONSUME WITH YOUR CREDIT CARD")
 public class PayAndConsumeController {
 	

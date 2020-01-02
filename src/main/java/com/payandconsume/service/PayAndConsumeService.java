@@ -1,6 +1,7 @@
 package com.payandconsume.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -19,6 +20,7 @@ public class PayAndConsumeService implements IPayAndConsumeService {
 	IPayAndConsumeRepository iPayAndConsumeRepository;
 
 	@Autowired
+	@Qualifier("creditCard")
 	WebClient client;
 
 	CreditCardModel creditCardModel = new CreditCardModel();

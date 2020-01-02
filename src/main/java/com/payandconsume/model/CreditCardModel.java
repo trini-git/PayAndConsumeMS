@@ -1,16 +1,14 @@
 package com.payandconsume.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "credit_card")
 public class CreditCardModel {
 	
 	private String id;
 	private String creditCardNumber;
-	private String accountNumber;
+	private String creditCardAccount;
 	private String type;
 	private Double creditLimit;
 	private Double avalibleAmount;
+	private String createdAt;
 	
 	public String getId() {
 		return id;
@@ -28,12 +26,12 @@ public class CreditCardModel {
 		this.creditCardNumber = creditCardNumber;
 	}
 
-	public String getAccountNumber() {
-		return accountNumber;
+	public String getCreditCardAccount() {
+		return creditCardAccount;
 	}
 
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
+	public void setCreditCardAccount(String creditCardAccount) {
+		this.creditCardAccount = creditCardAccount;
 	}
 
 	public Double getCreditLimit() {
@@ -58,6 +56,14 @@ public class CreditCardModel {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public String getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
 	}
 	
 	

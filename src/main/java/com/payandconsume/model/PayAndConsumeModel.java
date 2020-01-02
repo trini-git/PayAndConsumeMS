@@ -1,11 +1,10 @@
 package com.payandconsume.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Document(collection = "pay_and_consume")
 public class PayAndConsumeModel {
@@ -15,13 +14,12 @@ public class PayAndConsumeModel {
 	private String creditCardNumber;
 	private String type;
 	private Double amount;
-
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss")
-	private Date createdAt;
+	private String createdAt;
 
 	public PayAndConsumeModel() {
 
-		this.createdAt = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss"); 
+	    this.createdAt = formatter.format(new Date());
 	}
 
 	public String getId() {
@@ -56,11 +54,11 @@ public class PayAndConsumeModel {
 		this.amount = amount;
 	}
 
-	public Date getCreatedAt() {
+	public String getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(String createdAt) {
 		this.createdAt = createdAt;
 	}
 
